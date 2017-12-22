@@ -96,6 +96,12 @@ html {
   margin: auto;
 }
 
+.icon-image {
+  width: 60px;
+  margin: auto;
+  border: 1px solid #dadada;
+}
+
 .icon-box {
   float: left;
   margin: 15px;

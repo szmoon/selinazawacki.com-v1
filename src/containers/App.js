@@ -6,7 +6,7 @@ import * as actionCreators from './../actions/actionCreators';
 import { Bottombar } from './bottombar/Bottombar';
 import { Startmenu } from './Startmenu';
 import About from './windows/About';
-import Folder from './icons/Folder';
+import FolderIcon from './icons/FolderIcon';
 
 function mapStateToProps(state) {
   return {
@@ -38,7 +38,7 @@ class App extends Component {
 
   render() {
     let About2 = connect(mapStateToPropsAbout, mapDispatchToProps)(About);
-    let Folder2 = connect(mapStateToPropsAbout, mapDispatchToProps)(Folder);
+    let Folder2 = connect(mapStateToPropsAbout, mapDispatchToProps)(FolderIcon);
 
     return (
       <div>
