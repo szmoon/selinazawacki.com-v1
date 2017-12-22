@@ -6,6 +6,7 @@ import * as actionCreators from './../actions/actionCreators';
 import { Bottombar } from './bottombar/Bottombar';
 import { Startmenu } from './Startmenu';
 import About from './windows/About';
+import AboutImage from './windows/AboutImage';
 import FolderIcon from './icons/FolderIcon';
 
 function mapStateToProps(state) {
@@ -38,6 +39,7 @@ class App extends Component {
 
   render() {
     let About2 = connect(mapStateToPropsAbout, mapDispatchToProps)(About);
+    let AboutImage2 = connect(mapStateToPropsAbout, mapDispatchToProps)(AboutImage);
     let Folder2 = connect(mapStateToPropsAbout, mapDispatchToProps)(FolderIcon);
 
     return (
@@ -46,6 +48,7 @@ class App extends Component {
           <Folder2 text='about' action={this.props.aboutWindowOpen}/>
         </div>
         <About2 />
+        <AboutImage2 />
         <Bottombar />
       </div>
     );

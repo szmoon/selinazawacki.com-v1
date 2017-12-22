@@ -10,15 +10,14 @@ import ImageIcon from './../icons/ImageIcon';
 
 const About = createReactClass( {
   render() {
-    if (this.props.aboutWindow.open === true) {
+    if (this.props.aboutWindow.image === true) {
       return (
         <Draggable handle="strong" onDrag={this.props.handleDrag}>
-        <div className="window"> 
-          <strong className="cursor"><Topbar text='about' close={this.props.aboutWindowClose}/></strong>
+        <div className="window-image"> 
+          <strong className="cursor"><Topbar text='about.png' close={this.props.aboutImageClose}/></strong>
           <GreyBarExplorer />
           <div className="window-cont">
-            <TxtIcon text='about.txt' action={this.props.aboutWindowOpen}/>
-            <ImageIcon text='selina.png' url='./../../images/icons/selina-icon.png' action={this.props.aboutImageOpen}/>
+          <img src='./../../images/pngs/selina-large.png' />
           </div>
         </div>
         </Draggable>

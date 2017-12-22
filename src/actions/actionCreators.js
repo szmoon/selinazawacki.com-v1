@@ -1,51 +1,42 @@
 export function aboutWindowOpen(index) {
   return {
-    type: 'ABOUT_OPEN',
+    type: 'ABOUT_WINDOW_OPEN',
     index
   }
 }
 
 export function aboutWindowClose(index) {
   return {
-    type: 'ABOUT_CLOSE',
+    type: 'ABOUT_WINDOW_CLOSE',
     index
   }
 }
 
-
-
-export function candaceViewStart(index) {
+export function aboutTxtOpen(index) {
   return {
-    type: 'START',
+    type: 'ABOUT_TXT_OPEN',
     index
   }
 }
 
-export function candaceViewMatches(index) {
-  console.log('made it to action matches');
+export function aboutTxtClose(index) {
   return {
-    type: 'MATCHES',
+    type: 'ABOUT_TXT_CLOSE',
     index
   }
 }
 
-export function candaceViewSaved(index) {
+export function aboutImageOpen(index) {
   return {
-    type: 'SAVED',
+    type: 'ABOUT_IMAGE_OPEN',
     index
   }
 }
 
-export function currentUserCandace(index) {
+export function aboutImageClose(index) {
   return {
-    type: 'CANDACE',
+    type: 'ABOUT_IMAGE_CLOSE',
     index
   }
 }
 
-export function currentUserUser(index) {
-  return {
-    type: 'USER',
-    index
-  }
-}
