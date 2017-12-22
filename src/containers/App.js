@@ -10,7 +10,6 @@ import Folder from './icons/Folder';
 
 function mapStateToProps(state) {
   return {
-    
   }
 }
 
@@ -30,8 +29,6 @@ class App extends Component {
     this.state = {
     };
     this.update = this.update.bind(this);
-    this.clickIcon = this.clickIcon.bind(this);
-    // this.handleDrag = this.handleDrag.bind(this);
   }
 
   update(obj) {
@@ -39,23 +36,14 @@ class App extends Component {
     console.log("updated state");
   }
 
-  clickIcon() {
-    console.log("double clicked!");
-  }
-
   render() {
-    let folders = [
-      // <img key='about' src='./images/folder.png' className='icon'/>,
-      // <img key='folder' src='./images/folder.png' className='icon'/>
-    ];
-
     let About2 = connect(mapStateToPropsAbout, mapDispatchToProps)(About);
     let Folder2 = connect(mapStateToPropsAbout, mapDispatchToProps)(Folder);
 
     return (
       <div>
         <div className='divblock'>
-          <Folder2 action={this.props.aboutWindowOpen}/>
+          <Folder2 text='about' action={this.props.aboutWindowOpen}/>
         </div>
         <About2 />
         <Bottombar />

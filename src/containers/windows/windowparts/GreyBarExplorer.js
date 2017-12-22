@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 import { Closebutton } from './Closebutton';
 
-export class Topbargrey extends Component {
+export class GreyBarExplorer extends Component {
   constructor() {
     super();  
   }
@@ -10,7 +10,7 @@ export class Topbargrey extends Component {
   render() {
     return (
       <div className="top-bar-grey">
-        <p>File</p><p>Edit</p><p>Format</p><p>View</p><p>Help</p>
+        <p>File</p><p>Home</p><p>Share</p><p>View</p><p>Manage</p>
       </div>
     );
   }
