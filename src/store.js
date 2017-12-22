@@ -7,7 +7,9 @@ import rootReducer from './reducers/index';
 
 // create an obj for the default data
 const defaultState = {
-  currentUser: 'unknown',
+  aboutWindow: {
+    open: true
+  },
   candaceView: {
     start: true,
     matches: false,

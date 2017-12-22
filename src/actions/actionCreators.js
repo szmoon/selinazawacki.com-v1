@@ -1,3 +1,19 @@
+export function aboutWindowOpen(index) {
+  return {
+    type: 'ABOUT_OPEN',
+    index
+  }
+}
+
+export function aboutWindowClose(index) {
+  return {
+    type: 'ABOUT_CLOSE',
+    index
+  }
+}
+
+
+
 export function candaceViewStart(index) {
   return {
     type: 'START',
@@ -33,7 +49,3 @@ export function currentUserUser(index) {
     index
   }
 }
-
-
-
-

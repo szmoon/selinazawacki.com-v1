@@ -3,14 +3,14 @@ import { render } from 'react-dom';
 import { Closebutton } from './Closebutton';
 
 export class Topbar extends Component {
-  constructor() {
-    super();  
+  constructor(props) {
+    super(props);  
   }
 
   render() {
     return (
       <div className="top-bar">
-        <p>About.txt</p>
+        <p>{this.props.text}</p>
         <Closebutton update={this.props.update}/>
       </div>
     );
