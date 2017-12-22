@@ -1,10 +1,9 @@
 import { combineReducers } from 'redux';
 import { routerReducer } from 'react-router-redux';
 
-import candaceView from './candaceView';
 import aboutWindow from './aboutWindow';
+import icons from './icons';
 
-
-const rootReducer = combineReducers({aboutWindow, candaceView, routing: routerReducer});
+const rootReducer = combineReducers({aboutWindow, icons, routing: routerReducer});
 
 export default rootReducer;

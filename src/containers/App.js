@@ -6,9 +6,11 @@ import * as actionCreators from './../actions/actionCreators';
 import { Bottombar } from './bottombar/Bottombar';
 import { Startmenu } from './Startmenu';
 import About from './windows/About';
+import Folder from './icons/Folder';
 
 function mapStateToProps(state) {
   return {
+    
   }
 }
 
@@ -29,6 +31,7 @@ class App extends Component {
     };
     this.update = this.update.bind(this);
     this.clickIcon = this.clickIcon.bind(this);
+    // this.handleDrag = this.handleDrag.bind(this);
   }
 
   update(obj) {
@@ -42,19 +45,20 @@ class App extends Component {
 
   render() {
     let folders = [
-      <img key='about' src='./images/folder.png' className='icon'/>,
-      <img key='folder' src='./images/folder.png' className='icon'/>
+      // <img key='about' src='./images/folder.png' className='icon'/>,
+      // <img key='folder' src='./images/folder.png' className='icon'/>
     ];
 
     let About2 = connect(mapStateToPropsAbout, mapDispatchToProps)(About);
+    let Folder2 = connect(mapStateToPropsAbout, mapDispatchToProps)(Folder);
 
     return (
       <div>
         <div className='divblock'>
-          {folders}
-          <About2 />
-          <Bottombar />
+          <Folder2 action={this.props.aboutWindowOpen}/>
         </div>
+        <About2 />
+        <Bottombar />
       </div>
     );
   } 

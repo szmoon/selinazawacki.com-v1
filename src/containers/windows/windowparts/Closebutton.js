@@ -4,17 +4,11 @@ import { render } from 'react-dom';
 export class Closebutton extends Component {
   constructor() {
     super();  
-    this.closeWindow = this.closeWindow.bind(this);
-  }
-
-  closeWindow() {
-    console.log("closeWindow");
-    this.props.update({windowOpen: false});
   }
 
   render() {
     return (
-      <div className="close-button" onClick={this.closeWindow}>
+      <div className="close-button" onClick={this.props.close}>
         <p>X</p>
       </div>
     );

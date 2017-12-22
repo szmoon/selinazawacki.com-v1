@@ -9,13 +9,7 @@ import rootReducer from './reducers/index';
 const defaultState = {
   aboutWindow: {
     open: true
-  },
-  candaceView: {
-    start: true,
-    matches: false,
-    saved: false
-  }
-}
+  }}
 
 const store = createStore(rootReducer, defaultState);
 

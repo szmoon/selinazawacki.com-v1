@@ -11,7 +11,7 @@ export class Topbar extends Component {
     return (
       <div className="top-bar">
         <p>{this.props.text}</p>
-        <Closebutton update={this.props.update}/>
+        <Closebutton close={this.props.close}/>
       </div>
     );
   }
