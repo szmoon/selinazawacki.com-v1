@@ -8,10 +8,11 @@ import rootReducer from './reducers/index';
 // create an obj for the default data
 const defaultState = {
   aboutWindow: {
-    open: true,
+    open: false,
     txt: false,
     image: false
-  }}
+  }
+}
 
 const store = createStore(rootReducer, defaultState);
 

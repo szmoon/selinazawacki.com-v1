@@ -7,6 +7,7 @@ import { Bottombar } from './bottombar/Bottombar';
 import { Startmenu } from './Startmenu';
 import About from './windows/About';
 import AboutImage from './windows/AboutImage';
+import AboutTxt from './windows/AboutTxt';
 import FolderIcon from './icons/FolderIcon';
 
 function mapStateToProps(state) {
@@ -40,15 +41,18 @@ class App extends Component {
   render() {
     let About2 = connect(mapStateToPropsAbout, mapDispatchToProps)(About);
     let AboutImage2 = connect(mapStateToPropsAbout, mapDispatchToProps)(AboutImage);
-    let Folder2 = connect(mapStateToPropsAbout, mapDispatchToProps)(FolderIcon);
+    let AboutTxt2 = connect(mapStateToPropsAbout, mapDispatchToProps)(AboutTxt);
+    let AboutFolder = connect(mapStateToPropsAbout, mapDispatchToProps)(FolderIcon);
 
     return (
       <div>
         <div className='divblock'>
-          <Folder2 text='about' action={this.props.aboutWindowOpen}/>
+          <AboutFolder text='about' url='./../../../images/icons/folder-icon-pink.png' action={this.props.aboutWindowOpen}/>
+          <AboutFolder text='links' url='./../../../images/icons/folder-icon-orange.png' action={this.props.aboutWindowOpen}/>
         </div>
         <About2 />
         <AboutImage2 />
+        <AboutTxt2 />
         <Bottombar />
       </div>
     );
