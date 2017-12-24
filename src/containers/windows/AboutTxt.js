@@ -4,9 +4,6 @@ import Draggable from 'react-draggable';
 
 import { Topbar } from './windowparts/Topbar';
 import { GreyBarTxt } from './windowparts/GreyBarTxt';
-import FolderIcon from './../icons/FolderIcon';
-import TxtIcon from './../icons/TxtIcon';
-import ImageIcon from './../icons/ImageIcon';
 
 const About = createReactClass( {
   render() {

@@ -40,3 +40,16 @@ export function aboutImageClose(index) {
   }
 }
 
+export function linksWindowOpen(index) {
+  return {
+    type: 'LINKS_WINDOW_OPEN',
+    index
+  }
+}
+
+export function linksWindowClose(index) {
+  return {
+    type: 'LINKS_WINDOW_CLOSE',
+    index
+  }
+}

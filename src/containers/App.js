@@ -5,10 +5,11 @@ import * as actionCreators from './../actions/actionCreators';
 
 import { Bottombar } from './bottombar/Bottombar';
 import { Startmenu } from './Startmenu';
+import Icon from './icons/Icon';
 import About from './windows/About';
 import AboutImage from './windows/AboutImage';
 import AboutTxt from './windows/AboutTxt';
-import FolderIcon from './icons/FolderIcon';
+import Network from './windows/Network';
 
 function mapStateToProps(state) {
   return {
@@ -18,6 +19,12 @@ function mapStateToProps(state) {
 function mapStateToPropsAbout(state) {
   return {
     aboutWindow: state.aboutWindow
+  }
+}
+
+function mapStateToPropsLinks(state) {
+  return {
+    linksWindow: state.linksWindow
   }
 }
 
@@ -42,17 +49,19 @@ class App extends Component {
     let About2 = connect(mapStateToPropsAbout, mapDispatchToProps)(About);
     let AboutImage2 = connect(mapStateToPropsAbout, mapDispatchToProps)(AboutImage);
     let AboutTxt2 = connect(mapStateToPropsAbout, mapDispatchToProps)(AboutTxt);
-    let AboutFolder = connect(mapStateToPropsAbout, mapDispatchToProps)(FolderIcon);
+    let AboutFolder = connect(mapStateToPropsAbout, mapDispatchToProps)(Icon);
+    let Network2 = connect(mapStateToPropsLinks, mapDispatchToProps)(Network);
 
     return (
       <div>
         <div className='divblock'>
           <AboutFolder text='about' url='./../../../images/icons/folder-icon-pink.png' action={this.props.aboutWindowOpen}/>
-          <AboutFolder text='links' url='./../../../images/icons/folder-icon-orange.png' action={this.props.aboutWindowOpen}/>
+          <AboutFolder text='network' url='./../../../images/icons/network-icon.png' action={this.props.linksWindowOpen}/>
         </div>
         <About2 />
         <AboutImage2 />
         <AboutTxt2 />
+        <Network2 />
         <Bottombar />
       </div>
     );

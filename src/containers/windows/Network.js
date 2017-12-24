@@ -4,10 +4,9 @@ import Draggable from 'react-draggable';
 
 import { Topbar } from './windowparts/Topbar';
 import { GreyBarExplorer } from './windowparts/GreyBarExplorer';
-import TxtIcon from './../icons/TxtIcon';
-import ImageIcon from './../icons/ImageIcon';
+import Icon from './../icons/Icon';
 
-const About = createReactClass( {
+const Network = createReactClass( {
   render() {
     const styles = {
       top: 100,
@@ -15,15 +14,16 @@ const About = createReactClass( {
       width: 500,
       height: 400
     };
-    if (this.props.aboutWindow.open === true) {
+    if (this.props.linksWindow.open === true) {
       return (
         <Draggable handle="strong" onDrag={this.props.handleDrag}>
         <div className="window" style={styles}> 
-          <strong className="cursor"><Topbar text='about' close={this.props.aboutWindowClose}/></strong>
+          <strong className="cursor"><Topbar text='network connections' close={this.props.linksWindowClose}/></strong>
           <GreyBarExplorer />
           <div className="window-cont">
-            <TxtIcon text='about.txt' action={this.props.aboutTxtOpen}/>
-            <ImageIcon text='selina.png' url='./../../images/icons/selina-icon.png' action={this.props.aboutImageOpen}/>
+            <Icon text='twitter' url='./../../../images/icons/twitter-icon.png' action={this.props.aboutWindowOpen}/>
+            <Icon text='github' url='./../../../images/icons/github-icon.png' action={this.props.aboutWindowOpen}/>
+            <Icon text='linkedin' url='./../../../images/icons/linkedin-icon.png' action={this.props.aboutWindowOpen}/>
           </div>
         </div>
         </Draggable>
@@ -37,4 +37,4 @@ const About = createReactClass( {
   }
 });
 
-export default About;
+export default Network;

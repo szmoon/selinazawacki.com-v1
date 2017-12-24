@@ -11,6 +11,9 @@ const defaultState = {
     open: false,
     txt: false,
     image: false
+  },
+  linksWindow: {
+    open: false
   }
 }
 
