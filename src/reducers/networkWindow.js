@@ -1,12 +1,12 @@
-function linksWindow(state = {}, action) {
+function networkWindow(state = {}, action) {
   switch(action.type) {
-    case 'LINKS_WINDOW_OPEN' :
+    case 'NETWORK_WINDOW_OPEN' :
       return { ...state, open: true };
-    case 'LINKS_WINDOW_CLOSE' :
+    case 'NETWORK_WINDOW_CLOSE' :
       return { ...state, open: false };
     default:
       return state;
   }
 }
 
-export default linksWindow;
+export default networkWindow;

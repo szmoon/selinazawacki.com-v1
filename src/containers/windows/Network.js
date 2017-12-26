@@ -1,9 +1,9 @@
 import React from 'react';
 import Draggable from 'react-draggable';
 
-import { Topbar } from './windowparts/Topbar';
-import { GreyBarExplorer } from './windowparts/GreyBarExplorer';
-import Icon from './../icons/Icon';
+import { Topbar } from './../../components/windows/Topbar';
+import { GreyBarExplorer } from './../../components/windows/GreyBarExplorer';
+import Icon from './../../components/icons/Icon';
 
 class Network extends React.Component {
   constructor() {
@@ -11,13 +11,13 @@ class Network extends React.Component {
     this.openUrl = this.openUrl.bind(this);
   }
   
-  shouldComponentUpdate(nextProps) {
-    if (this.props.linksWindow.open !== nextProps.linksWindow.open) {
-      return true;
-    } else {
-      return false;
-    }
-  }
+  // shouldComponentUpdate(nextProps) {
+  //   if (this.props.networkWindow.open !== nextProps.networkWindow.open) {
+  //     return true;
+  //   } else {
+  //     return false;
+  //   }
+  // }
 
   openUrl(url) {
     var win = window.open(url, '_blank');
@@ -26,8 +26,8 @@ class Network extends React.Component {
 
   render() {
     const styles = {
-      top: this.props.linksWindow.top,
-      left: this.props.linksWindow.left,
+      top: this.props.networkWindow.top,
+      left: this.props.networkWindow.left,
       width: 500,
       height: 400
     };
@@ -36,11 +36,11 @@ class Network extends React.Component {
       console.log('boo');
     }
 
-    if (this.props.linksWindow.open === true) {
+    if (this.props.networkWindow.open === true) {
       return (
         <Draggable handle="strong" onDrag={this.props.handleDrag}>
         <div className="window" style={styles}> 
-          <strong className="cursor"><Topbar text='network connections' close={this.props.linksWindowClose}/></strong>
+          <strong className="cursor"><Topbar text='network connections' close={this.props.networkWindowClose}/></strong>
           <GreyBarExplorer />
           <div className="window-cont">
             <Icon text='twitter' url='./../../../images/icons/twitter-icon.png' onDoubleClick={(e) => this.openUrl('https://twitter.com/selinazawacki', e)} />

@@ -25,7 +25,7 @@ const defaultState = {
     left: 900,
     top: 150
   },
-  linksWindow: {
+  networkWindow: {
     open: false,
     focus: false,
     left: 400,

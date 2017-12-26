@@ -1,11 +1,14 @@
-import React, { Component } from 'react';
-var createReactClass = require('create-react-class');
+import React from 'react';
 import Draggable from 'react-draggable';
 
-import { Topbar } from './windowparts/Topbar';
-import { GreyBarExplorer } from './windowparts/GreyBarExplorer';
+import { Topbar } from './../../components/windows/Topbar';
+import { GreyBarExplorer } from './../../components/windows/GreyBarExplorer';
 
-const About = createReactClass( {
+class AboutImage extends React.Component {
+  constructor() {
+    super();
+  }
+
   render() {
     const styles = {
       top: this.props.aboutImage.top,
@@ -31,6 +34,6 @@ const About = createReactClass( {
     }
     
   }
-});
+};
 
-export default About;
+export default AboutImage;

@@ -1,11 +1,14 @@
-import React, { Component } from 'react';
-var createReactClass = require('create-react-class');
+import React from 'react';
 import Draggable from 'react-draggable';
 
-import { Topbar } from './windowparts/Topbar';
-import { GreyBarTxt } from './windowparts/GreyBarTxt';
+import { Topbar } from './../../components/windows/Topbar';
+import { GreyBarTxt } from './../../components/windows/GreyBarTxt';
 
-const About = createReactClass( {
+class AboutTxt extends React.Component {
+  constructor() {
+    super();
+  }
+
   render() {
     const styles = {
       top: this.props.aboutTxt.top,
@@ -36,6 +39,6 @@ const About = createReactClass( {
     }
     
   }
-});
+};
 
-export default About;
+export default AboutTxt;

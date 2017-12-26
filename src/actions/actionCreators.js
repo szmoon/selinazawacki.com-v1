@@ -40,16 +40,16 @@ export function aboutImageClose(index) {
   }
 }
 
-export function linksWindowOpen(index) {
+export function networkWindowOpen(index) {
   return {
-    type: 'LINKS_WINDOW_OPEN',
+    type: 'NETWORK_WINDOW_OPEN',
     index
   }
 }
 
-export function linksWindowClose(index) {
+export function networkWindowClose(index) {
   return {
-    type: 'LINKS_WINDOW_CLOSE',
+    type: 'NETWORK_WINDOW_CLOSE',
     index
   }
 }
