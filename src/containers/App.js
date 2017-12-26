@@ -37,13 +37,13 @@ class App extends Component {
     super();
     this.state = {
     };
-    this.update = this.update.bind(this);
+    // this.openLink = this.openLink.bind(this);
   }
 
-  update(obj) {
-    this.setState(obj);
-    console.log("updated state");
-  }
+  // function openLink(url) {
+  //   var win = window.open(url, '_blank');
+  //   win.focus();
+  // }
 
   render() {
     let About2 = connect(mapStateToPropsAbout, mapDispatchToProps)(About);
@@ -61,7 +61,7 @@ class App extends Component {
         <About2 />
         <AboutImage2 />
         <AboutTxt2 />
-        <Network2 />
+        <Network2 openLink={this.openLink} />
         <Bottombar />
       </div>
     );

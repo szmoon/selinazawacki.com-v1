@@ -15,6 +15,13 @@ html {
   background-size: cover;
 }
 
+.testing {
+  float: left;
+  height: 80px;
+  width: 80px;
+  background-color: black;
+}
+
 #bottom-bar {
   /* position */
   position: fixed;

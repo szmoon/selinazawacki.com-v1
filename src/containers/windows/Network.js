@@ -1,12 +1,21 @@
-import React, { Component } from 'react';
-var createReactClass = require('create-react-class');
+import React from 'react';
 import Draggable from 'react-draggable';
 
 import { Topbar } from './windowparts/Topbar';
 import { GreyBarExplorer } from './windowparts/GreyBarExplorer';
 import Icon from './../icons/Icon';
 
-const Network = createReactClass( {
+class Network extends React.Component {
+  constructor() {
+    super();
+    this.openUrl = this.openUrl.bind(this);
+  }
+  
+  openUrl(url) {
+    var win = window.open(url, '_blank');
+    win.focus();
+  }
+
   render() {
     const styles = {
       top: 100,
@@ -14,6 +23,11 @@ const Network = createReactClass( {
       width: 500,
       height: 400
     };
+
+    function test() {
+      console.log('boo');
+    }
+
     if (this.props.linksWindow.open === true) {
       return (
         <Draggable handle="strong" onDrag={this.props.handleDrag}>
@@ -21,9 +35,9 @@ const Network = createReactClass( {
           <strong className="cursor"><Topbar text='network connections' close={this.props.linksWindowClose}/></strong>
           <GreyBarExplorer />
           <div className="window-cont">
-            <Icon text='twitter' url='./../../../images/icons/twitter-icon.png' action={this.props.aboutWindowOpen}/>
-            <Icon text='github' url='./../../../images/icons/github-icon.png' action={this.props.aboutWindowOpen}/>
-            <Icon text='linkedin' url='./../../../images/icons/linkedin-icon.png' action={this.props.aboutWindowOpen}/>
+            <Icon text='twitter' url='./../../../images/icons/twitter-icon.png' onDoubleClick={(e) => this.openUrl('https://twitter.com/selinazawacki', e)} />
+            <Icon text='github' url='./../../../images/icons/github-icon.png' onDoubleClick={(e) => this.openUrl('https://github.com/szmoon', e)} />
+            <Icon text='linkedin' url='./../../../images/icons/linkedin-icon.png' onDoubleClick={(e) => this.openUrl('https://www.linkedin.com/in/selina-chang-yi-zawacki/', e)} />
           </div>
         </div>
         </Draggable>
@@ -35,6 +49,6 @@ const Network = createReactClass( {
     }
     
   }
-});
+};
 
 export default Network;
