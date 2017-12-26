@@ -2,9 +2,11 @@ import { combineReducers } from 'redux';
 import { routerReducer } from 'react-router-redux';
 
 import aboutWindow from './aboutWindow';
+import aboutImage from './aboutImage';
+import aboutTxt from './aboutTxt';
 import linksWindow from './linksWindow';
 import icons from './icons';
 
-const rootReducer = combineReducers({aboutWindow, linksWindow, icons, routing: routerReducer});
+const rootReducer = combineReducers({aboutWindow, aboutImage, aboutTxt, linksWindow, icons, routing: routerReducer});
 
 export default rootReducer;

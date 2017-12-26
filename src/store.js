@@ -9,11 +9,27 @@ import rootReducer from './reducers/index';
 const defaultState = {
   aboutWindow: {
     open: false,
-    txt: false,
-    image: false
+    focus: false,
+    left: 450,
+    top: 50
+  },
+  aboutTxt: {
+    open: false,
+    focus: false,
+    left: 80,
+    top: 300
+  },
+  aboutImage: {
+    open: false,
+    focus: false,
+    left: 900,
+    top: 150
   },
   linksWindow: {
-    open: false
+    open: false,
+    focus: false,
+    left: 400,
+    top: 400
   }
 }
 

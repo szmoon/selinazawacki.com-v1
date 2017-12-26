@@ -13,12 +13,26 @@ import Network from './windows/Network';
 
 function mapStateToProps(state) {
   return {
+    // aboutWindow: state.aboutWindow,
+    // linksWindow: state.linksWindow
   }
 }
 
-function mapStateToPropsAbout(state) {
+function mapStateToPropsAboutWindow(state) {
   return {
     aboutWindow: state.aboutWindow
+  }
+}
+
+function mapStateToPropsAboutTxt(state) {
+  return {
+    aboutTxt: state.aboutTxt
+  }
+}
+
+function mapStateToPropsAboutImage(state) {
+  return {
+    aboutImage: state.aboutImage
   }
 }
 
@@ -37,19 +51,13 @@ class App extends Component {
     super();
     this.state = {
     };
-    // this.openLink = this.openLink.bind(this);
   }
 
-  // function openLink(url) {
-  //   var win = window.open(url, '_blank');
-  //   win.focus();
-  // }
-
   render() {
-    let About2 = connect(mapStateToPropsAbout, mapDispatchToProps)(About);
-    let AboutImage2 = connect(mapStateToPropsAbout, mapDispatchToProps)(AboutImage);
-    let AboutTxt2 = connect(mapStateToPropsAbout, mapDispatchToProps)(AboutTxt);
-    let AboutFolder = connect(mapStateToPropsAbout, mapDispatchToProps)(Icon);
+    let About2 = connect(mapStateToPropsAboutWindow, mapDispatchToProps)(About);
+    let AboutImage2 = connect(mapStateToPropsAboutImage, mapDispatchToProps)(AboutImage);
+    let AboutTxt2 = connect(mapStateToPropsAboutTxt, mapDispatchToProps)(AboutTxt);
+    let AboutFolder = connect(mapStateToPropsAboutWindow, mapDispatchToProps)(Icon);
     let Network2 = connect(mapStateToPropsLinks, mapDispatchToProps)(Network);
 
     return (
@@ -61,7 +69,7 @@ class App extends Component {
         <About2 />
         <AboutImage2 />
         <AboutTxt2 />
-        <Network2 openLink={this.openLink} />
+        <Network2 />
         <Bottombar />
       </div>
     );

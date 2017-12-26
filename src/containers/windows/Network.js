@@ -11,6 +11,14 @@ class Network extends React.Component {
     this.openUrl = this.openUrl.bind(this);
   }
   
+  shouldComponentUpdate(nextProps) {
+    if (this.props.linksWindow.open !== nextProps.linksWindow.open) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   openUrl(url) {
     var win = window.open(url, '_blank');
     win.focus();
@@ -18,8 +26,8 @@ class Network extends React.Component {
 
   render() {
     const styles = {
-      top: 100,
-      left: 450,
+      top: this.props.linksWindow.top,
+      left: this.props.linksWindow.left,
       width: 500,
       height: 400
     };

@@ -8,11 +8,11 @@ import { GreyBarExplorer } from './windowparts/GreyBarExplorer';
 const About = createReactClass( {
   render() {
     const styles = {
-      top: 25,
-      left: 1000,
+      top: this.props.aboutImage.top,
+      left: this.props.aboutImage.left,
       width: 300
     };
-    if (this.props.aboutWindow.image === true) {
+    if (this.props.aboutImage.image === true) {
       return (
         <Draggable handle="strong" onDrag={this.props.handleDrag}>
         <div className="window-image" style={styles}> 

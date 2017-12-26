@@ -10,8 +10,8 @@ import ImageIcon from './../icons/ImageIcon';
 const About = createReactClass( {
   render() {
     const styles = {
-      top: 100,
-      left: 450,
+      top: this.props.aboutWindow.top,
+      left: this.props.aboutWindow.left,
       width: 500,
       height: 400
     };
