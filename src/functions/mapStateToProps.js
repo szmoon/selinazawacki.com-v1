@@ -1,4 +1,3 @@
-console.log('booo');
 var exports = module.exports = {
 
   app: function(state) {
@@ -26,7 +25,7 @@ var exports = module.exports = {
     };
   },
 
-  links: function(state) {
+  network: function(state) {
     return {
       networkWindow: state.networkWindow
     };

@@ -29,7 +29,7 @@ class App extends Component {
     let AboutImage2 = connect(mapStateToProps.aboutImage, mapDispatchToProps)(AboutImage);
     let AboutTxt2 = connect(mapStateToProps.aboutTxt, mapDispatchToProps)(AboutTxt);
     let AboutFolder = connect(mapStateToProps.aboutWindow, mapDispatchToProps)(Icon);
-    let Network2 = connect(mapStateToProps.links, mapDispatchToProps)(Network);
+    let Network2 = connect(mapStateToProps.network, mapDispatchToProps)(Network);
 
     return (
       <div>
