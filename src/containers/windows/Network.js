@@ -52,7 +52,7 @@ class Network extends React.Component {
       );
     } else {
       return(
-        <div></div>
+        null
       );
     }
     

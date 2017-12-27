@@ -34,7 +34,7 @@ class AboutTxt extends React.Component {
       );
     } else {
       return(
-        <div></div>
+        null
       );
     }
     

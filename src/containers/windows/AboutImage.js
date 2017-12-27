@@ -29,7 +29,7 @@ class AboutImage extends React.Component {
       );
     } else {
       return(
-        <div></div>
+        null
       );
     }
     
