@@ -1,30 +1,34 @@
-export function mapStateToProps(state) {
-  return {
-    // aboutWindow: state.aboutWindow,
-    // networkWindow: state.networkWindow
-  }
-}
+console.log('booo');
+var exports = module.exports = {
 
-function AboutWindow(state) {
-  return {
-    aboutWindow: state.aboutWindow
-  }
-}
+  app: function(state) {
+    return {
+      // aboutWindow: state.aboutWindow,
+      // networkWindow: state.networkWindow
+    };
+  },
 
-function mapStateToPropsAboutTxt(state) {
-  return {
-    aboutTxt: state.aboutTxt
-  }
-}
+  aboutWindow: function(state) {
+    return {
+      aboutWindow: state.aboutWindow
+    };
+  },
 
-function mapStateToPropsAboutImage(state) {
-  return {
-    aboutImage: state.aboutImage
-  }
-}
+  aboutTxt: function(state) {
+    return {
+      aboutTxt: state.aboutTxt
+    };
+  },
 
-function mapStateToPropsLinks(state) {
-  return {
-    networkWindow: state.networkWindow
+  aboutImage: function(state) {
+    return {
+      aboutImage: state.aboutImage
+    };
+  },
+
+  links: function(state) {
+    return {
+      networkWindow: state.networkWindow
+    };
   }
-}
+};

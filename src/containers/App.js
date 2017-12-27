@@ -11,36 +11,7 @@ import AboutImage from './windows/AboutImage';
 import AboutTxt from './windows/AboutTxt';
 import Network from './windows/Network';
 
-function mapStateToProps(state) {
-  return {
-    // aboutWindow: state.aboutWindow,
-    // networkWindow: state.networkWindow
-  }
-}
-
-function mapStateToPropsAboutWindow(state) {
-  return {
-    aboutWindow: state.aboutWindow
-  }
-}
-
-function mapStateToPropsAboutTxt(state) {
-  return {
-    aboutTxt: state.aboutTxt
-  }
-}
-
-function mapStateToPropsAboutImage(state) {
-  return {
-    aboutImage: state.aboutImage
-  }
-}
-
-function mapStateToPropsLinks(state) {
-  return {
-    networkWindow: state.networkWindow
-  }
-}
+var mapStateToProps = require("./../functions/mapStateToProps");
 
 function mapDispatchToProps(dispatch) {
   return bindActionCreators(actionCreators, dispatch);
@@ -54,11 +25,11 @@ class App extends Component {
   }
 
   render() {
-    let About2 = connect(mapStateToPropsAboutWindow, mapDispatchToProps)(About);
-    let AboutImage2 = connect(mapStateToPropsAboutImage, mapDispatchToProps)(AboutImage);
-    let AboutTxt2 = connect(mapStateToPropsAboutTxt, mapDispatchToProps)(AboutTxt);
-    let AboutFolder = connect(mapStateToPropsAboutWindow, mapDispatchToProps)(Icon);
-    let Network2 = connect(mapStateToPropsLinks, mapDispatchToProps)(Network);
+    let About2 = connect(mapStateToProps.aboutWindow, mapDispatchToProps)(About);
+    let AboutImage2 = connect(mapStateToProps.aboutImage, mapDispatchToProps)(AboutImage);
+    let AboutTxt2 = connect(mapStateToProps.aboutTxt, mapDispatchToProps)(AboutTxt);
+    let AboutFolder = connect(mapStateToProps.aboutWindow, mapDispatchToProps)(Icon);
+    let Network2 = connect(mapStateToProps.links, mapDispatchToProps)(Network);
 
     return (
       <div>
@@ -76,4 +47,4 @@ class App extends Component {
   } 
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps.app, mapDispatchToProps)(App);
